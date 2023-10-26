@@ -1,12 +1,17 @@
-const randomNumber = Math.floor(Math.random() * 5) + 1; 
+const RockPaperScissors = ["steen", "papier", "schaar"];
+const random = Math.floor(Math.random() * RockPaperScissors.length);
 
-while (true) {
-  let guess = parseInt(prompt("Kies een getal tussen de 1 en de 5"));
+let computerSelection = RockPaperScissors[random];
 
-  if (guess === randomNumber) {
-    alert("Juist!");
-    break; 
-  } else {
-    alert("Probeer opnieuw."); 
-  }
+let playerSelection = prompt("Choose Rock, Paper or Scissors.").toLowerCase();
+
+if (playerSelection === computerSelection) {
+    alert("Tie!");
+} else if ((playerSelection === "steen" && computerSelection === "schaar") || 
+          (playerSelection === "papier" && computerSelection === "steen") ||
+          (playerSelection === "schaar" && computerSelection === "papier"))
+{
+    alert("Win!");
+} else {
+    alert("Lose!");
 }
