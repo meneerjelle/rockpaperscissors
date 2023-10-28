@@ -27,6 +27,8 @@ choiceScissors.addEventListener("click", function(event) {
     runGame("schaar");
 });
 
+restartGame.style.display = "none";
+
 restartGame.addEventListener("click", function() {
     userScore = 0;
     computerScore = 0;
@@ -34,9 +36,10 @@ restartGame.addEventListener("click", function() {
     result.innerHTML = "";
     scoreOutput.innerHTML = `Jij: <strong>${userScore}</strong> Computer: <strong>${computerScore}</strong>`;
 
+    restartGame.style.display = "none";
+
 
 })
-
 
 
 function runGame(playerSelection) {
@@ -81,6 +84,8 @@ function disableGame() {
     choiceRock.disabled = true;
     choicePaper.disabled = true;
     choiceScissors.disabled = true;
+
+    restartGame.style.display = "block";
 
 }
 
