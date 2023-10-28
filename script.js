@@ -52,14 +52,14 @@ function runGame(playerSelection) {
             playerSelection === "papier" && computerSelection === "steen" ||
             playerSelection === "schaar" && computerSelection === "papier"
         ) {
-            result.innerHTML = `Computer koos <strong>${computerSelection}</strong>. <span style="color: green;">Punt voor jou!</span>`;
+            result.innerHTML = `Computer koos <strong>${computerSelection}</strong>. <span style="color: #364F6B;">Punt voor jou!</span>`;
             userScore += 1;
             
         } else if (playerSelection.value === computerSelection) {
             result.innerHTML = `Jullie kozen allebei <strong>${computerSelection}</strong>. Gelijk!`;
     
         } else {
-            result.innerHTML = `Computer koos <strong>${computerSelection}</strong>. <span style="color: red;">Punt voor computer!</span>`;
+            result.innerHTML = `Computer koos <strong>${computerSelection}</strong>. <span style="color: #364F6B;">Punt voor computer!</span>`;
             computerScore += 1;
     
         } 
@@ -67,11 +67,11 @@ function runGame(playerSelection) {
         scoreOutput.innerHTML = `Jij: <strong>${userScore}</strong> Computer: <strong>${computerScore}</strong>`;
     
         if (userScore === 3) {
-            scoreOutput.innerHTML = `<span style="font-size: 3rem; color: green;">GEWONNEN!</span>`;
+            scoreOutput.innerHTML = `<span style="font-size: 3rem; color: #364F6B;">GEWONNEN!</span>`;
             disableGame();
 
         } else if (computerScore === 3) {
-            scoreOutput.innerHTML = `<span style="font-size: 3rem; color: red;">VERLOREN!</span>`;
+            scoreOutput.innerHTML = `<span style="font-size: 3rem; color: #364F6B;">VERLOREN!</span>`;
             disableGame();
         }
     
