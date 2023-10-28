@@ -1,3 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(100%); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'NTR', sans-serif;
+    color: #F5F5F5;
+    font-size: 7rem;
+    animation: fadeIn 1s;
+    line-height: 10rem;
+}
+
+p {
+    font-family: 'NTR', sans-serif;
+    color: #F5F5F5;
+    font-size: 3rem;
+}
+
 .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     text-align: center;
 }
+
+.title {
+    flex: 1 1;
+    background-color: #364F6B;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    flex: 2 1;
+    display: flex;
+    padding: 1rem;
+    background-color: #3FC1C9;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.score {
+    flex: 2 1;
+
+    background-color: #ff83a8;
+}
+
+.fa-regular {
+    margin: 3rem;
+    padding: 1rem;
+    font-size: 10rem;
+    color: #F5F5F5;
+    border: 10px solid;
+    border-radius: 35px;
+}
+
+.fa-regular.fa-hand-scissors.fa-flip-horizontal {
+    line-height: 148px;
+}
+
+.fa-beat {
+    --fa-beat-scale: 1.02;
+}
+
+.fa-solid.fa-arrows-rotate {
+    font-size: 7rem;
+    color: #F5F5F5;
+}
+
+.fa-solid.fa-arrows-rotate:hover {
+    animation: rotateRefresh 2s infinite;
+}
+
+@keyframes rotateRefresh {
+    100% {transform: rotate(360deg);}
+}
+

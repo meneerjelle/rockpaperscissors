@@ -3,17 +3,31 @@
   <head>
     <title>JS test</title>
     <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/0ad59dd812.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=NTR&family=Rubik:wght@600&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-    <h1 class="title">Steen, papier, schaar</h1>
-    <select name="choice" id="playerSelection">
-        <option value="steen">Steen</option>
-        <option value="papier">Papier</option>
-        <option value="schaar">Schaar</option>
-    </select>
-    <input type="submit" value="Speel!">
+        <div class="title">
+            <h1>Steen, papier, schaar</h1>
+        </div>
+
+    <div class="input">
+        <div class="fa-beat">
+            <a href="#" id="steen"><i class="fa-regular fa-hand-back-fist fa-rotate-90 fa-fw"></i></a>
+            <a href="#" id="papier"><i class="fa-regular fa-hand fa-rotate-90 fa-fw"></i></a>
+            <a href="#" id="schaar"><i class="fa-regular fa-hand-scissors fa-flip-horizontal"></i></a>
+        </div>
     </div>
+        
+    <div class="score">
+        <p id="result"></p>
+        <p id="scoreOutput"></p>
+        <p id="restart"><a href="#" id="restartGame"><i class="fa-solid fa-arrows-rotate"></i></a></p>
+    </div>
+</div>
   </body>
 </html>
