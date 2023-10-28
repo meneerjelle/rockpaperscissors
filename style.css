@@ -86,3 +86,13 @@ p {
     100% {transform: rotate(360deg);}
 }
 
+.fa-regular.fa-hand-back-fist.fa-rotate-90.fa-fw:hover,
+.fa-regular.fa-hand.fa-rotate-90.fa-fw:hover,
+.fa-regular.fa-hand-scissors.fa-flip-horizontal:hover {
+    animation: changeColor 0.5s infinite;
+    transition: color 0.5s;
+    color: #364F6B;
+}
+
+
+
