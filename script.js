@@ -58,7 +58,7 @@ function runGame(playerSelection) {
             result.innerHTML = `Computer koos <strong>${computerSelection}</strong>. <span style="color: #364F6B;">Punt voor jou!</span>`;
             userScore += 1;
             
-        } else if (playerSelection.value === computerSelection) {
+        } else if (playerSelection === computerSelection) {
             result.innerHTML = `Jullie kozen allebei <strong>${computerSelection}</strong>. Gelijk!`;
     
         } else {
